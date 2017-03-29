@@ -10,6 +10,12 @@ function add_item($key, $quantity) {
         update_item($key, $quantity);
         return;
     }
+    
+    //End session and delete cookie
+    function end_and_delete($session_id)
+    {
+           $_SESSION = array();
+    }
 
     // Add item
     $cost = $products[$key]['cost'];
