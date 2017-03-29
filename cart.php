@@ -16,6 +16,8 @@ function add_item($key, $quantity) {
     {
            $_SESSION = array();
             session_destroy();
+            $expire = strtotime('-1 year');
+            setcookie('userid','',$expire, '/');
             return session_id;
     }
 
