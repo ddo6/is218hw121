@@ -54,5 +54,8 @@ switch($action) {
         unset($_SESSION['cart12']);
         include('cart_view.php');
         break;
+    case 'end_and_delete':
+        include('end_and_delete');
+        break;
 }
 ?>
