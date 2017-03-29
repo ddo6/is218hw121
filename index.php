@@ -1,6 +1,7 @@
 <?php
 // Start session management with a persistent cookie
-$lifetime = 0;    // 2 weeks in seconds
+//$lifetime=600;  //Set Lifetime to 0
+$lifetime=94670778; //Set lifetime to 3 years in seconds
 session_set_cookie_params($lifetime, '/');
 session_start();
 
