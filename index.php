@@ -55,7 +55,7 @@ switch($action) {
         include('cart_view.php');
         break;
     case 'end_and_delete':
-        include('end_and_delete');
+        include('cart_view.php');
         break;
 }
 ?>
