@@ -1,7 +1,4 @@
-<?php
-echo session_id();
-?>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
