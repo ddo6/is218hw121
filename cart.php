@@ -15,6 +15,8 @@ function add_item($key, $quantity) {
     function end_and_delete($session_id)
     {
            $_SESSION = array();
+            session_destroy();
+            return session_id;
     }
 
     // Add item
