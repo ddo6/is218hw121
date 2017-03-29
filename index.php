@@ -4,6 +4,7 @@
 $lifetime=94670778; //Set lifetime to 3 years in seconds
 session_set_cookie_params($lifetime, '/');
 session_start();
+session_id();
 
 // Create a cart array if needed
 if (empty($_SESSION['cart'])) { $_SESSION['cart'] = array(); }
