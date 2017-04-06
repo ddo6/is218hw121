@@ -4,7 +4,7 @@
 $lifetime=94670778; //Set lifetime to 3 years in seconds
 session_set_cookie_params($lifetime, '/');
 session_start();
-echo session_id();
+
 
 // Create a cart array if needed
 if (empty($_SESSION['cart'])) { $_SESSION['cart'] = array(); }
@@ -55,6 +55,16 @@ switch($action) {
         include('cart_view.php');
         break;
     case 'end_and_delete':
+        $_SESSION = array();
+        session_destroy();     
+        $name = session_name();                
+        $expire = strtotime('-1 year');        
+        $params = session_get_cookie_params(); 
+        $path = $params['path'];
+        $domain = $params['domain'];
+        $secure = $params['secure'];
+        $httponly = $params['httponly'];
+        setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
         include('cart_view.php');
         break;
 }
